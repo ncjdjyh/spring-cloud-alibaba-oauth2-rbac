@@ -1,12 +1,9 @@
-package com.ncjdjyh.series.oauth2.common.config;
+package com.ncjdjyh.series.oauth2.dependencies.config;
 
 import cn.hutool.core.util.StrUtil;
-import com.ncjdjyh.series.oauth2.common.constant.SecurityConstants;
-import com.netflix.ribbon.proxy.annotation.Http;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import com.ncjdjyh.series.oauth2.dependencies.constant.DefaultSecurityConstants;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,8 +24,8 @@ public class RbacService {
     }
 
     private boolean validateInnerProviderCall(HttpServletRequest request) {
-        String header = request.getHeader(SecurityConstants.FROM);
-        return StrUtil.equals(SecurityConstants.FROM_IN, header);
+        String header = request.getHeader(DefaultSecurityConstants.FROM);
+        return StrUtil.equals(DefaultSecurityConstants.FROM_IN, header);
     }
 
     private boolean validateAuth(Collection<? extends GrantedAuthority> collection, String url) {

@@ -1,12 +1,11 @@
-package com.ncjdjyh.series.oauth2.common.config;
+package com.ncjdjyh.series.oauth2.dependencies.config;
 
-import com.ncjdjyh.series.oauth2.common.constant.SecurityConstants;
+import com.ncjdjyh.series.oauth2.dependencies.constant.DefaultSecurityConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
-import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
 @Slf4j
 public class SecurityBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {
@@ -21,7 +20,7 @@ public class SecurityBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
 		GenericBeanDefinition rbacServiceBean = new GenericBeanDefinition();
 		resourceServerBean.setBeanClass(DefaultResourceServerConfigurerAdapter.class);
 		rbacServiceBean.setBeanClass(RbacService.class);
-		registry.registerBeanDefinition(SecurityConstants.RESOURCE_SERVER_CONFIGURER, resourceServerBean);
-		registry.registerBeanDefinition(SecurityConstants.RBAC_SERVICE_BEAN_NAME, rbacServiceBean);
+		registry.registerBeanDefinition(DefaultSecurityConstants.RESOURCE_SERVER_CONFIGURER, resourceServerBean);
+		registry.registerBeanDefinition(DefaultSecurityConstants.RBAC_SERVICE_BEAN_NAME, rbacServiceBean);
 	}
 }

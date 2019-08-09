@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.ncjdjyh.series.oauth2.common.constant;
+package com.ncjdjyh.series.oauth2.dependencies.constant;
 
-public interface SecurityConstants {
+public interface DefaultSecurityConstants {
 	/**
 	 * 内部
 	 */

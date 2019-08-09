@@ -1,9 +1,9 @@
 package com.ncjdjyh.series.oauth2.common.service.impl;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbPermission;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ncjdjyh.series.oauth2.common.mapper.TbPermissionMapper;
 import com.ncjdjyh.series.oauth2.common.service.ITbPermissionService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbPermission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

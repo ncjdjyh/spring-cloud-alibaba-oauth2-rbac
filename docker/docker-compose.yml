@@ -1,0 +1,40 @@
+version: '3'
+services:
+  common-service:
+    restart: always
+    volumes:
+      - /var/log/oauth/common-service:/var/oauth/common-service
+    ports:
+      - 7000:7000
+    container_name: common-service
+    hostname: common-service
+    image: oauth2/common-service
+
+  api-service:
+    restart: always
+    volumes:
+      - /var/log/oauth/api-service:/var/oauth/api-service
+    ports:
+      - 8078:8078
+    container_name: api-service
+    hostname: api-service
+    image: oauth2/api-service
+
+  gateway-service:
+    volumes:
+      - /var/log/oauth/gateway-service:/var/oauth/gateway-service
+    restart: always
+    ports:
+      - 5099:5099
+    container_name: gateway-service
+    hostname: gateway-service
+    image: oauth2/gateway-service
+
+  auth-service:
+    volumes:
+      - /var/log/oauth/auth-service:/var/oauth/auth-service
+    restart: always
+    container_name: auth-service
+    hostname: auth-service
+    image: oauth2/auth-service
+

@@ -1,7 +1,7 @@
 package com.ncjdjyh.series.oauth2.common.service;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbRolePermission;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbRolePermission;
 
 /**
  * <p>

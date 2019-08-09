@@ -1,7 +1,7 @@
 package com.ncjdjyh.series.oauth2.common.mapper;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbRolePermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbRolePermission;
 
 /**
  * <p>

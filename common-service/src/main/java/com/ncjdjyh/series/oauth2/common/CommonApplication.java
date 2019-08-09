@@ -1,6 +1,6 @@
 package com.ncjdjyh.series.oauth2.common;
 
-import com.ncjdjyh.series.oauth2.common.annotation.EnableInnerResourceServer;
+import com.ncjdjyh.series.oauth2.dependencies.annotation.EnableInnerResourceServer;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;

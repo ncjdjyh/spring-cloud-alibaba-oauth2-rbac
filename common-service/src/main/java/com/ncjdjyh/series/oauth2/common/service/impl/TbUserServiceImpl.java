@@ -1,10 +1,10 @@
 package com.ncjdjyh.series.oauth2.common.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.ncjdjyh.series.oauth2.common.entity.TbUser;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ncjdjyh.series.oauth2.common.mapper.TbUserMapper;
 import com.ncjdjyh.series.oauth2.common.service.ITbUserService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

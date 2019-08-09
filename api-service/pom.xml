@@ -9,17 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>biz-service</artifactId>
+    <artifactId>api-service</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.ncjdjyh.series</groupId>
-            <artifactId>common-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>common-dependencies</artifactId>
         </dependency>
     </dependencies>
 
     <build>
+        <finalName>api-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

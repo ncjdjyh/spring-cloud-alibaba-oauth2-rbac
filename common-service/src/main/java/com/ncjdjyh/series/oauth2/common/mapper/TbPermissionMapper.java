@@ -1,10 +1,9 @@
 package com.ncjdjyh.series.oauth2.common.mapper;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbPermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbPermission;
 import org.apache.ibatis.annotations.Param;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 /**

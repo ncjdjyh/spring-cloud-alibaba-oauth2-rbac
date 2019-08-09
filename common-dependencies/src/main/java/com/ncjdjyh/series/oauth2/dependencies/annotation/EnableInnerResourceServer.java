@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.ncjdjyh.series.oauth2.common.annotation;
+package com.ncjdjyh.series.oauth2.dependencies.annotation;
 
-import com.ncjdjyh.series.oauth2.common.config.SecurityBeanDefinitionRegistrar;
+import com.ncjdjyh.series.oauth2.dependencies.config.SecurityBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;

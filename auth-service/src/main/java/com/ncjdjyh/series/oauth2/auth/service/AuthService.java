@@ -1,8 +1,8 @@
 package com.ncjdjyh.series.oauth2.auth.service;
 
-import com.ncjdjyh.series.oauth2.common.constant.SecurityConstants;
-import com.ncjdjyh.series.oauth2.common.entity.TbPermission;
-import com.ncjdjyh.series.oauth2.common.entity.TbUser;
+import com.ncjdjyh.series.oauth2.dependencies.constant.DefaultSecurityConstants;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbPermission;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbUser;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +24,7 @@ public interface AuthService {
      * @description: ~
      */
     @GetMapping(value = "/user/getUserByAccount/{account}")
-    TbUser getUserByUserName(@PathVariable("account") String userName, @RequestHeader(SecurityConstants.FROM) String from);
+    TbUser getUserByUserName(@PathVariable("account") String userName, @RequestHeader(DefaultSecurityConstants.FROM) String from);
 
     /**
      * @param id   用户 id
@@ -33,5 +33,5 @@ public interface AuthService {
      * @description: ~
      */
     @GetMapping(value = "/permission/getAllUserPermission/{id}")
-    List<TbPermission> getAllUserAuth(@PathVariable("id") long id, @RequestHeader(SecurityConstants.FROM) String from);
+    List<TbPermission> getAllUserAuth(@PathVariable("id") long id, @RequestHeader(DefaultSecurityConstants.FROM) String from);
 }

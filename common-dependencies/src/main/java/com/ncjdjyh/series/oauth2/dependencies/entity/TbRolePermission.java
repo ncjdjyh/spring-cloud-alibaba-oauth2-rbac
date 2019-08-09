@@ -1,16 +1,16 @@
-package com.ncjdjyh.series.oauth2.common.entity;
+package com.ncjdjyh.series.oauth2.dependencies.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * <p>
- * 角色表
+ * 角色权限表
  * </p>
  *
  * @author ncjdjyh
@@ -19,7 +19,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class TbRole implements Serializable {
+public class TbRolePermission implements Serializable {
 
     private static final long serialVersionUID=1L;
 
@@ -27,28 +27,14 @@ public class TbRole implements Serializable {
     private Long id;
 
     /**
-     * 父角色
+     * 角色 ID
      */
-    private Long parentId;
+    private Long roleId;
 
     /**
-     * 角色名称
+     * 权限 ID
      */
-    private String name;
-
-    /**
-     * 角色英文名称
-     */
-    private String enname;
-
-    /**
-     * 备注
-     */
-    private String description;
-
-    private LocalDateTime created;
-
-    private LocalDateTime updated;
+    private Long permissionId;
 
 
 }

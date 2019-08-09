@@ -1,7 +1,7 @@
 package com.ncjdjyh.series.oauth2.common.service.impl;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbPermission;
 import com.ncjdjyh.series.oauth2.common.service.ITbPermissionService;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbPermission;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

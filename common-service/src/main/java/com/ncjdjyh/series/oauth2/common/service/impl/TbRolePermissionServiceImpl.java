@@ -1,9 +1,9 @@
 package com.ncjdjyh.series.oauth2.common.service.impl;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbRolePermission;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ncjdjyh.series.oauth2.common.mapper.TbRolePermissionMapper;
 import com.ncjdjyh.series.oauth2.common.service.ITbRolePermissionService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbRolePermission;
 import org.springframework.stereotype.Service;
 
 /**

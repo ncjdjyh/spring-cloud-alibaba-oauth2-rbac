@@ -4,6 +4,7 @@ target/
 !**/src/main/**
 !**/src/test/**
 
+
 ### STS ###
 .apt_generated
 .classpath
@@ -26,6 +27,7 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
+logs
 
 ### VS Code ###
 .vscode/

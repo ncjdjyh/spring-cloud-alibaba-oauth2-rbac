@@ -1,10 +1,8 @@
 package com.ncjdjyh.series.oauth2.api;
 
-import com.ncjdjyh.series.oauth2.common.annotation.EnableInnerResourceServer;
+import com.ncjdjyh.series.oauth2.dependencies.annotation.EnableInnerResourceServer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Author: ncjdjyh

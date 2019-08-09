@@ -1,9 +1,9 @@
 package com.ncjdjyh.series.oauth2.common.service.impl;
 
-import com.ncjdjyh.series.oauth2.common.entity.TbUserRole;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ncjdjyh.series.oauth2.common.mapper.TbUserRoleMapper;
 import com.ncjdjyh.series.oauth2.common.service.ITbUserRoleService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.ncjdjyh.series.oauth2.dependencies.entity.TbUserRole;
 import org.springframework.stereotype.Service;
 
 /**
