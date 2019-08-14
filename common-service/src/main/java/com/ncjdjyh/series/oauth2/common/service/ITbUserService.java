@@ -13,4 +13,6 @@ import com.ncjdjyh.series.oauth2.dependencies.entity.TbUser;
  */
 public interface ITbUserService extends IService<TbUser> {
     TbUser getUserByPhone(String account);
+
+    TbUser getUserByName(String name);
 }

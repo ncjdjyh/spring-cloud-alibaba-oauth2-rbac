@@ -1,4 +1,4 @@
-package com.ncjdjyh.series.oauth2.dependencies.config;
+package com.ncjdjyh.series.oauth2.dependencies.entity;
 
 import cn.hutool.core.util.StrUtil;
 import com.ncjdjyh.series.oauth2.dependencies.constant.DefaultSecurityConstants;

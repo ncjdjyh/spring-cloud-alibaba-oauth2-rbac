@@ -27,4 +27,11 @@ public class TbUserServiceImpl extends ServiceImpl<TbUserMapper, TbUser> impleme
         queryWrapper.lambda().eq(TbUser::getPhone, account);
         return mapper.selectOne(queryWrapper);
     }
+
+    @Override
+    public TbUser getUserByName(String name) {
+        QueryWrapper<TbUser> queryWrapper = new QueryWrapper<>();
+        queryWrapper.lambda().eq(TbUser::getUsername, name);
+        return mapper.selectOne(queryWrapper);
+    }
 }

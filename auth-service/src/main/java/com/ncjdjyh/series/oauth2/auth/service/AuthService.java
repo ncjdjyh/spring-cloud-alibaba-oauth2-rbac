@@ -18,13 +18,22 @@ import java.util.List;
 @FeignClient(value = "common-service")
 public interface AuthService {
     /**
-     * @param userName 用户名称
+     * @param account 电话号码
      * @param from 内部调用标识
      * @return com.ncjdjyh.series.oauth2.common.entity.TbUser
      * @description: ~
      */
     @GetMapping(value = "/user/getUserByAccount/{account}")
-    TbUser getUserByUserName(@PathVariable("account") String userName, @RequestHeader(DefaultSecurityConstants.FROM) String from);
+    TbUser getUserByPhone(@PathVariable("account") String account, @RequestHeader(DefaultSecurityConstants.FROM) String from);
+
+    /**
+     * @param username
+     * @param from
+     * @return com.ncjdjyh.series.oauth2.dependencies.entity.TbUser
+     * @description: ~
+     */
+    @GetMapping(value = "/user/getUserByAccount/{name}")
+    TbUser getUserByName(@PathVariable("name") String username, @RequestHeader(DefaultSecurityConstants.FROM) String from);
 
     /**
      * @param id   用户 id

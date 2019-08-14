@@ -17,6 +17,7 @@
             <groupId>com.ncjdjyh.series</groupId>
             <artifactId>common-dependencies</artifactId>
             <exclusions>
+                <!-- gateway 依赖 webflux 与 web 模块冲突 -->
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-web</artifactId>

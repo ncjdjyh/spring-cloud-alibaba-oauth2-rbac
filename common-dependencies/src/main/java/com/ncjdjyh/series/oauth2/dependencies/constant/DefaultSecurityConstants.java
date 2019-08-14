@@ -20,4 +20,9 @@ public interface DefaultSecurityConstants {
 	 * rbac 服务器默认 bean 名称
 	 */
 	String RBAC_SERVICE_BEAN_NAME = "rbacService";
+
+	/**
+	* claims 中存放的信息
+	* */
+	String TEL = "tel";
 }

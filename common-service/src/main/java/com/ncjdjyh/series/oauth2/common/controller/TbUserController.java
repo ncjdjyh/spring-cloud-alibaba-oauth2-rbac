@@ -27,5 +27,10 @@ public class TbUserController {
     public TbUser getUserByAccount(@PathVariable("account") String phone) {
         return service.getUserByPhone(phone);
     }
+
+    @GetMapping("/getUserByUsername/{name}")
+    public TbUser getUserByUsername(@PathVariable("name") String name) {
+        return service.getUserByName(name);
+    }
 }
 

@@ -1,6 +1,7 @@
 package com.ncjdjyh.series.oauth2.dependencies.config;
 
 import com.ncjdjyh.series.oauth2.dependencies.constant.DefaultSecurityConstants;
+import com.ncjdjyh.series.oauth2.dependencies.entity.RbacService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;

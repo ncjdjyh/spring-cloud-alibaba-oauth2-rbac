@@ -6,9 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.jwt.crypto.sign.MacSigner;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.expression.OAuth2WebSecurityExpressionHandler;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Slf4j
 public class DefaultResourceServerConfigurerAdapter extends ResourceServerConfigurerAdapter {
@@ -22,9 +25,22 @@ public class DefaultResourceServerConfigurerAdapter extends ResourceServerConfig
 		return expressionHandler;
 	}
 
+	@Bean("resourceTokenStore")
+	public JwtTokenStore tokenStore() {
+		return new JwtTokenStore(jwtAccessTokenConverter());
+	}
+
+	@Bean("resourceConverter")
+	public JwtAccessTokenConverter jwtAccessTokenConverter(){
+		JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter();
+		accessTokenConverter.setSigningKey("123");
+		accessTokenConverter.setVerifier(new MacSigner("123"));
+		return accessTokenConverter;
+	}
+
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) {
-		resources.expressionHandler(expressionHandler);
+		resources.tokenStore(tokenStore()).expressionHandler(expressionHandler);
 	}
 
 	@Override
