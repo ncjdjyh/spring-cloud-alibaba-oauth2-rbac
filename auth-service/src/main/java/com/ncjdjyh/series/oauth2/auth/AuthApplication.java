@@ -1,6 +1,5 @@
 package com.ncjdjyh.series.oauth2.auth;
 
-import com.ncjdjyh.series.oauth2.dependencies.annotation.EnableInnerResourceServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -11,7 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Description: ~
  */
 @EnableFeignClients
-@EnableInnerResourceServer
 @SpringCloudApplication
 public class AuthApplication {
     public static void main(String[] args) {
